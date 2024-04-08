@@ -1,0 +1,173 @@
+/* Main */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+/* Main */
+
+/* Header */
+header {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+  z-index: 9;
+}
+
+header nav h1.header__title {
+  color: orange;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+header nav .container a.navbar-brand {
+  color: orange;
+  letter-spacing: -1px;
+}
+
+header nav .container .collapse .nav-item a:hover {
+  color: orange;
+}
+
+header nav .container .collapse form input,
+header nav .container .collapse form button {
+  font-size: 1.1rem;
+}
+
+header nav .container .collapse form button {
+  background-color: orange;
+  color: white;
+}
+/* /Header */
+
+/* Categories */
+section.categories {
+  background-color: #eaf2f6;
+}
+
+section.categories .categories-cards .row {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+section.categories .categories-cards .card {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+section.categories .categories-cards .card .categories__card-content {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  text-align: center;
+  padding: 1rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+section.categories .categories-cards .card .categories__card-content button {
+  border: none;
+  border-radius: 0.3rem;
+  background-color: orange;
+  position: absolute;
+  display: block;
+  width: 80%;
+  bottom: 0;
+  margin-bottom: 1rem;
+  margin: 1 auto;
+  padding: 0.2rem 0;
+}
+
+section.categories .categories-cards .card .categories__card-content h1 {
+  font-size: 1.5rem;
+}
+
+section.categories .categories-cards .card:hover .categories__card-content {
+  opacity: 1;
+}
+
+/* section.categories .categories-cards .card p.card-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  margin: 0.8rem 0;
+}
+
+section.categories .categories-cards .card .btn {
+  letter-spacing: 1px;
+  background-color: midnightblue;
+  border: none;
+} */
+
+/* /Categories */
+
+/* Favorites */
+.splide__track ul.splide__list .favorites__card {
+  margin: 0 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.splide__track ul.splide__list .favorites__card .card-body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.splide__track ul.splide__list .favorites__card .card-body h5 {
+  position: absolute;
+  bottom: 0;
+  margin: 0 1rem 2rem 1rem;
+  display: block;
+  text-align: center;
+}
+
+.heart__btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.5rem;
+  color: red;
+  background-color: #fff;
+  border: none;
+}
+
+.heart__btn:hover {
+  color: gray !important;
+}
+/* /Favorites */
+
+/* All Recipes */
+section.all-recipes {
+  background-color: #fcfee8;
+}
+
+.recipes__card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.recipes__btn {
+  background-color: orange;
+  color: white;
+  letter-spacing: 1px;
+}
+/* /All Recipes */

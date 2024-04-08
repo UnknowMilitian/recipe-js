@@ -1,0 +1,35 @@
+@media screen and (max-width: 990px) {
+  section.categories .categories-cards .card .categories__card-content button {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section.categories .categories-cards .card .categories__card-content {
+    opacity: 1;
+  }
+  section.categories .categories-cards .card .categories__card-content button {
+    width: 85%;
+  }
+  .section_title {
+    font-size: 2.2rem !important;
+  }
+  .section_icon {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.categories .categories-cards .card .categories__card-content {
+    padding: 2rem 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  section.categories .categories-cards .card .categories__card-content button {
+    width: 88%;
+  }
+
+  section.categories .categories-cards .card .categories__card-content h1 {
+    font-size: 2.5rem;
+  }
+}

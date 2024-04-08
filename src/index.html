@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Meals project - JS</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid container">
+          <a class="navbar-brand fs-2" href="#">AllRecipes</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse mb-2 mb-sm-0"
+            id="navbarSupportedContent"
+          >
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto gap-2 gap-sm-5 fs-5 text-center text-md-auto"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="#categories"
+                  ><i
+                    class="bi bi-person-lines-fill text-primary mx-1 fs-6"
+                  ></i>
+                  Categories</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#favorites"
+                  ><i class="bi bi-star-fill text-danger mx-1 fs-6"></i>
+                  Favorites</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#all-recipes"
+                  ><i class="bi bi-list-task text-warning mx-1 fs-6"></i> All
+                  Recipes</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- /Header Section -->
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+      <div class="container-fluid container">
+        <h1 class="section_title fs-3 text-center text-primary">
+          Categories
+          <i
+            class="section_icon bi bi-person-lines-fill text-primary mx-1 fs-4"
+          ></i>
+        </h1>
+        <div class="categories-cards">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-2 mb-3">
+              <div class="card rounded-4">
+                <img
+                  class="card-img-top rounded-4"
+                  src="./images/1.png"
+                  alt="..."
+                />
+                <div class="categories__card-content">
+                  <h1>Fishes</h1>
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2 mb-3">
+              <div class="card rounded-4">
+                <img
+                  class="card-img-top rounded-4"
+                  src="./images/2.png"
+                  alt="..."
+                />
+                <div class="categories__card-content">
+                  <h1>Fishes</h1>
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2 mb-3">
+              <div class="card rounded-4">
+                <img
+                  class="card-img-top rounded-4"
+                  src="./images/3.png"
+                  alt="..."
+                />
+                <div class="categories__card-content">
+                  <h1>Fishes</h1>
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2 mb-3">
+              <div class="card rounded-4">
+                <img
+                  class="card-img-top rounded-4"
+                  src="./images/4.png"
+                  alt="..."
+                />
+                <div class="categories__card-content">
+                  <h1>Fishes</h1>
+                  <button>Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Categories -->
+
+    <!-- Favorites -->
+    <section class="favorites" id="favorites">
+      <h1 class="section_title fs-3 text-center text-danger">
+        Favorites
+        <i class="section_icon bi bi-star-fill text-danger mx-1 fs-4"></i>
+      </h1>
+      <div class="container-fluid px-0 px-md-0">
+        <div
+          class="splide px-0 pb-5 pt-4 px-md-5"
+          role="group"
+          aria-label="Splide Basic HTML Example"
+        >
+          <div class="splide__track">
+            <ul class="splide__list text-center">
+              <li class="splide__slide">
+                <div class="favorites__card card rounded-4">
+                  <img
+                    class="card-img-top rounded-4"
+                    src="./images/5.png"
+                    alt="..."
+                  />
+                  <div class="card-body py-4">
+                    <h5 class="card-title fs-4">
+                      Potato Salad (Olivier Salad)
+                    </h5>
+                  </div>
+                  <button class="btn bg-white text-danger heart__btn">
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="favorites__card card rounded-4">
+                  <img
+                    class="card-img-top rounded-4"
+                    src="./images/1.png"
+                    alt="..."
+                  />
+                  <div class="card-body py-4">
+                    <h5 class="card-title fs-4">
+                      Potato Salad (Olivier Salad)
+                    </h5>
+                  </div>
+                  <button class="btn bg-white text-danger heart__btn">
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="favorites__card card rounded-4">
+                  <img
+                    class="card-img-top rounded-4"
+                    src="./images/6.png"
+                    alt="..."
+                  />
+                  <div class="card-body py-4">
+                    <h5 class="card-title fs-4">
+                      Potato Salad (Olivier Salad)
+                    </h5>
+                  </div>
+                  <button class="btn bg-white text-danger heart__btn">
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="favorites__card card rounded-4">
+                  <img
+                    class="card-img-top rounded-4"
+                    src="./images/7.png"
+                    alt="..."
+                  />
+                  <div class="card-body py-4">
+                    <h5 class="card-title fs-4">
+                      Potato Salad (Olivier Salad)
+                    </h5>
+                  </div>
+                  <button class="btn bg-white text-danger heart__btn">
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Favorites -->
+
+    <!-- All Recipes -->
+    <section class="all-recipes" id="all-recipes">
+      <div class="container-fluid container">
+        <h1 class="section_title fs-3 text-center text-warning mb-4">
+          All Recipes
+          <i class="section_icon bi bi-list-task text-warning mx-1 fs-4"></i>
+        </h1>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card recipes__card rounded-4">
+              <img
+                class="card-img-top rounded-4"
+                src="./images/8.png"
+                alt="..."
+              />
+              <div class="card-body py-4">
+                <h5 class="card-title fs-4">Lamb pilav(Plov)</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a
+                  href="#"
+                  class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
+                  >Details</a
+                >
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card recipes__card rounded-4">
+              <img
+                class="card-img-top rounded-4"
+                src="./images/2.png"
+                alt="..."
+              />
+              <div class="card-body py-4">
+                <h5 class="card-title fs-4">Strawberries Romanoff</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a
+                  href="#"
+                  class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
+                  >Details</a
+                >
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card recipes__card rounded-4">
+              <img
+                class="card-img-top rounded-4"
+                src="./images/3.png"
+                alt="..."
+              />
+              <div class="card-body py-4">
+                <h5 class="card-title fs-4">Potato Salad (Olivier Salad)</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a
+                  href="#"
+                  class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
+                  >Details</a
+                >
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card recipes__card rounded-4">
+              <img
+                class="card-img-top rounded-4"
+                src="./images/4.png"
+                alt="..."
+              />
+              <div class="card-body py-4">
+                <h5 class="card-title fs-4">Blini Pancakes</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a
+                  href="#"
+                  class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
+                  >Details</a
+                >
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /All Recipes -->
+  </body>
+</html>
