@@ -2,6 +2,9 @@
   section.categories .categories-cards .card .categories__card-content button {
     width: 90%;
   }
+  .modal {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -17,6 +20,9 @@
   .section_icon {
     font-size: 2rem !important;
   }
+  .modal {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -31,5 +37,11 @@
 
   section.categories .categories-cards .card .categories__card-content h1 {
     font-size: 2.5rem;
+  }
+  .modal {
+    width: 95%;
+    max-height: 95%;
+    border-radius: 0.75rem;
+    overflow-y: scroll;
   }
 }

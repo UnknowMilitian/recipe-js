@@ -11,6 +11,26 @@ section {
   padding: 2rem 0;
 }
 
+.modal {
+  position: fixed;
+  width: 40%;
+  height: 95%;
+  background-color: gray;
+  z-index: 10;
+  padding: 3rem 1rem 1rem 1rem;
+  display: block;
+  border-radius: 0.75rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.modal .modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
 /* Main */
 
 /* Header */
@@ -51,71 +71,6 @@ header nav .container .collapse form button {
 }
 /* /Header */
 
-/* Categories */
-section.categories {
-  background-color: #eaf2f6;
-}
-
-section.categories .categories-cards .row {
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-section.categories .categories-cards .card {
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-}
-
-section.categories .categories-cards .card .categories__card-content {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  text-align: center;
-  padding: 1rem 1rem;
-  transition: all 0.2s ease-in-out;
-}
-
-section.categories .categories-cards .card .categories__card-content button {
-  border: none;
-  border-radius: 0.3rem;
-  background-color: orange;
-  position: absolute;
-  display: block;
-  width: 80%;
-  bottom: 0;
-  margin-bottom: 1rem;
-  margin: 1 auto;
-  padding: 0.2rem 0;
-}
-
-section.categories .categories-cards .card .categories__card-content h1 {
-  font-size: 1.5rem;
-}
-
-section.categories .categories-cards .card:hover .categories__card-content {
-  opacity: 1;
-}
-
-/* section.categories .categories-cards .card p.card-text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
-  margin: 0.8rem 0;
-}
-
-section.categories .categories-cards .card .btn {
-  letter-spacing: 1px;
-  background-color: midnightblue;
-  border: none;
-} */
-
-/* /Categories */
-
 /* Favorites */
 .splide__track ul.splide__list .favorites__card {
   margin: 0 1rem;
@@ -150,7 +105,7 @@ section.categories .categories-cards .card .btn {
   border: none;
 }
 
-.heart__btn:hover {
+.heart__btn:focus {
   color: gray !important;
 }
 /* /Favorites */
@@ -169,6 +124,7 @@ section.all-recipes {
   background-color: orange;
   color: white !important;
   letter-spacing: 1px;
+  margin-top: 1rem;
 }
 
 .recipes__btn:hover {
@@ -179,7 +135,7 @@ section.all-recipes .heart__btn {
   color: gray !important;
 }
 
-section.all-recipes .heart__btn:hover {
+section.all-recipes .heart__btn:focus {
   color: red !important;
 }
 /* /All Recipes */
