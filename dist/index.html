@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Meals project - JS</title>
-  <script defer src="polyfill.1b69408e883d65f09923.js"></script><script defer src="app.1b69408e883d65f09923.js"></script><link href="./style.css" rel="stylesheet"></head>
+  <script defer src="polyfill.fa7bf23f54fb683834f4.js"></script><script defer src="app.fa7bf23f54fb683834f4.js"></script><link href="./style.css" rel="stylesheet"></head>
   <body>
     <!-- Header Section -->
     <header>
@@ -31,21 +31,13 @@
               class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto gap-2 gap-sm-5 fs-5 text-center text-md-auto"
             >
               <li class="nav-item">
-                <a class="nav-link" href="#categories"
-                  ><i
-                    class="bi bi-person-lines-fill text-primary mx-1 fs-6"
-                  ></i>
-                  Categories</a
-                >
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#favorites"
                   ><i class="bi bi-star-fill text-danger mx-1 fs-6"></i>
                   Favorites</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"
+                <a class="nav-link" href="#all-recipes"
                   ><i class="bi bi-list-task text-warning mx-1 fs-6"></i> All
                   Recipes</a
                 >
@@ -66,168 +58,209 @@
     </header>
     <!-- /Header Section -->
 
-    <!-- Categories -->
-    <section class="categories" id="categories">
-      <div class="container-fluid container">
-        <h1 class="fs-3 text-center text-primary">
-          Categories
-          <i class="bi bi-person-lines-fill text-primary mx-1 fs-4"></i>
-        </h1>
-        <div class="categories-cards">
-          <div class="row">
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-              <div class="card rounded-4">
-                <img
-                  class="card-img-top rounded-4"
-                  src="./images/1.png"
-                  alt="..."
-                />
-                <div class="card-body py-4">
-                  <h5 class="card-title fs-4">Lamb pilav(Plov)</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary rounded-1 w-full d-block text-uppercase fw-bold"
-                    >Details</a
-                  >
+    <!-- Favorites -->
+    <section class="favorites" id="favorites">
+      <h1 class="section_title fs-3 text-center text-danger">
+        Favorites
+        <i class="section_icon bi bi-star-fill text-danger mx-1 fs-4"></i>
+      </h1>
+      <div class="container-fluid px-0 px-md-0">
+        <div
+          class="splide px-0 pb-5 pt-4 px-md-5"
+          role="group"
+          aria-label="Splide Basic HTML Example"
+        >
+          <div class="splide__track">
+            <ul class="splide__list text-center">
+              <li class="splide__slide">
+                <div class="favorites__card card rounded-4">
+                  <img
+                    class="card-img-top rounded-4"
+                    src="./images/5.png"
+                    alt="..."
+                  />
+                  <div class="card-body py-4">
+                    <h5 class="card-title fs-4">
+                      Potato Salad (Olivier Salad)
+                    </h5>
+                  </div>
+                  <button class="btn bg-white text-danger heart__btn">
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
                 </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-              <div class="card rounded-4">
-                <img
-                  class="card-img-top rounded-4"
-                  src="./images/2.png"
-                  alt="..."
-                />
-                <div class="card-body py-4">
-                  <h5 class="card-title fs-4">Strawberries Romanoff</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary rounded-1 w-full d-block text-uppercase fw-bold"
-                    >Details</a
-                  >
+              </li>
+              <li class="splide__slide">
+                <div class="favorites__card card rounded-4">
+                  <img
+                    class="card-img-top rounded-4"
+                    src="./images/1.png"
+                    alt="..."
+                  />
+                  <div class="card-body py-4">
+                    <h5 class="card-title fs-4">
+                      Potato Salad (Olivier Salad)
+                    </h5>
+                  </div>
+                  <button class="btn bg-white text-danger heart__btn">
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
                 </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-              <div class="card rounded-4">
-                <img
-                  class="card-img-top rounded-4"
-                  src="./images/3.png"
-                  alt="..."
-                />
-                <div class="card-body py-4">
-                  <h5 class="card-title fs-4">Potato Salad (Olivier Salad)</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary rounded-1 w-full d-block text-uppercase fw-bold"
-                    >Details</a
-                  >
+              </li>
+              <li class="splide__slide">
+                <div class="favorites__card card rounded-4">
+                  <img
+                    class="card-img-top rounded-4"
+                    src="./images/6.png"
+                    alt="..."
+                  />
+                  <div class="card-body py-4">
+                    <h5 class="card-title fs-4">
+                      Potato Salad (Olivier Salad)
+                    </h5>
+                  </div>
+                  <button class="btn bg-white text-danger heart__btn">
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
                 </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-              <div class="card rounded-4">
-                <img
-                  class="card-img-top rounded-4"
-                  src="./images/4.png"
-                  alt="..."
-                />
-                <div class="card-body py-4">
-                  <h5 class="card-title fs-4">Blini Pancakes</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-primary rounded-1 w-full d-block text-uppercase fw-bold"
-                    >Details</a
-                  >
+              </li>
+              <li class="splide__slide">
+                <div class="favorites__card card rounded-4">
+                  <img
+                    class="card-img-top rounded-4"
+                    src="./images/7.png"
+                    alt="..."
+                  />
+                  <div class="card-body py-4">
+                    <h5 class="card-title fs-4">
+                      Potato Salad (Olivier Salad)
+                    </h5>
+                  </div>
+                  <button class="btn bg-white text-danger heart__btn">
+                    <i class="bi bi-heart-fill"></i>
+                  </button>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-    <!-- /Categories -->
 
-    <!-- Favorites -->
-    <section class="favorites" id="favorites">
-      <h1 class="fs-3 text-center text-danger">
-        Favorites
-        <i class="bi bi-star-fill text-danger mx-1 fs-4"></i>
-      </h1>
-      <div
-        class="splide px-0 pb-5 pt-4 px-md-5"
-        role="group"
-        aria-label="Splide Basic HTML Example"
-      >
-        <div class="splide__track">
-          <ul class="splide__list text-center">
-            <li class="splide__slide">
-              <div class="favorites__card card rounded-4">
-                <img
-                  class="card-img-top rounded-4"
-                  src="./images/1.png"
-                  alt="..."
-                />
-                <div class="card-body py-4">
-                  <h5 class="card-title fs-4">Potato Salad (Olivier Salad)</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="favorites__card card rounded-4">
-                <img
-                  class="card-img-top rounded-4"
-                  src="./images/2.png"
-                  alt="..."
-                />
-                <div class="card-body py-4">
-                  <h5 class="card-title fs-4">Potato Salad (Olivier Salad)</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="favorites__card card rounded-4">
-                <img
-                  class="card-img-top rounded-4"
-                  src="./images/3.png"
-                  alt="..."
-                />
-                <div class="card-body py-4">
-                  <h5 class="card-title fs-4">Potato Salad (Olivier Salad)</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <div class="modal">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
+          similique ex maiores eos eius aliquid necessitatibus optio voluptatem
+          soluta ipsum maxime ratione, aliquam commodi saepe cum minus! Quia non
+          dolorem odio facere beatae ipsa id ullam sed veritatis libero! Soluta,
+          quaerat! Quas, tempore, nemo minima eos fugit aperiam distinctio ipsam
+          suscipit quo, iure officiis? Itaque cum officia reprehenderit natus,
+          praesentium eius voluptas magnam placeat maiores id neque ratione
+          mollitia facere asperiores quo dolores est fugiat nisi cupiditate
+          vitae consequuntur quod quasi. Alias, modi perspiciatis consequuntur
+          quos facilis fugiat libero dolorem inventore quae eveniet earum ad
+          excepturi aspernatur recusandae nobis vel vitae corrupti tempora.
+          Commodi voluptas vitae modi fugit voluptatem doloremque natus,
+          repellat, inventore porro temporibus quas optio, iste officiis? Esse
+          laudantium ipsum placeat fugit sed eos incidunt iste totam, quas quia
+          nisi nobis, praesentium at quibusdam fuga facilis asperiores excepturi
+          dolorum ut iure perferendis error? Doloribus ipsam tempore, suscipit
+          velit cumque beatae aliquid illum doloremque nesciunt! Veritatis odio
+          amet assumenda maiores, rem corporis numquam reprehenderit quod id!
+          Tenetur molestiae assumenda eius perspiciatis facere aperiam dolore
+          possimus sequi eum magnam autem tempore eveniet reprehenderit
+          dignissimos nobis nisi blanditiis dolores delectus recusandae itaque
+          debitis aliquam commodi, necessitatibus praesentium. Blanditiis totam
+          deleniti exercitationem quam velit quod, officiis adipisci maxime
+          eaque aliquam ea repudiandae corrupti, praesentium nisi. Saepe,
+          accusamus qui? Sed accusantium incidunt, ab a esse eos natus vitae
+          placeat. Dolor sit voluptates iure sunt! Hic sit repudiandae obcaecati
+          nobis adipisci veritatis qui vel repellat, aperiam et, numquam quae
+          dolorem recusandae facere iste doloribus ipsum quod? Unde ipsam
+          voluptatem fugiat maiores dicta inventore praesentium, iusto alias
+          earum officiis nemo nihil ea eaque dolore veritatis est debitis
+          mollitia nobis asperiores ratione soluta odit quis. Ipsum eveniet
+          voluptatibus veritatis eaque, culpa voluptas voluptate nam nihil
+          repudiandae sunt molestiae molestias tempore non qui aspernatur, nobis
+          fugit omnis odit recusandae! Laborum, dolor reiciendis quae quo fugit
+          unde mollitia, labore dolorum animi nesciunt esse ducimus omnis
+          consequatur corporis tempore, culpa maiores perspiciatis natus
+          molestias assumenda! Excepturi porro ipsam possimus et quia,
+          laboriosam sapiente sed quas harum voluptas culpa nihil, consequuntur
+          qui? Repellat consequatur quibusdam, magni ducimus vero mollitia
+          assumenda quas maxime unde accusamus similique rem quod sapiente est.
+          Repudiandae sunt aspernatur aperiam modi, eius laborum in iusto
+          dolores quibusdam voluptates pariatur ad corporis consequatur
+          molestiae quis error sed quia mollitia nisi quidem enim minus.
+          Corporis eaque sunt aliquid, officia iste esse quaerat amet iure
+          explicabo quis nulla reprehenderit voluptatibus ipsam eius suscipit
+          cupiditate repudiandae sed, dolores illum! Tenetur illum repellat,
+          veniam, delectus blanditiis modi beatae itaque cupiditate quis nobis
+          aliquam, incidunt perspiciatis nostrum odio quaerat. Assumenda in
+          quasi ipsam, error quis ipsa ullam ut dolorum unde deserunt fugit
+          repudiandae iure cupiditate. Hic repudiandae quae culpa quisquam sint
+          delectus harum earum, blanditiis ea a neque. Ab hic eos explicabo,
+          debitis culpa, quidem porro, ipsam qui eius vero omnis inventore
+          aperiam officia cupiditate quis! Temporibus laborum aspernatur iure
+          deserunt porro commodi! Cupiditate distinctio sunt est incidunt! In
+          cupiditate ducimus praesentium sed modi? Architecto cum non
+          necessitatibus aut ad. Numquam dolores molestiae iusto, dolor, et
+          harum est accusantium eum repudiandae nulla, illum vel! Aut saepe
+          ullam quos sequi quod eligendi eaque animi at! Veritatis vero facilis
+          autem, vel culpa ullam asperiores incidunt, deleniti sunt aliquam,
+          corporis sequi a ex architecto consectetur. Voluptatum obcaecati ipsam
+          laborum eaque earum facilis aliquam unde quidem, tempore nostrum dolor
+          quae architecto. Mollitia quod libero, perspiciatis quaerat esse
+          ratione saepe facilis fuga cupiditate totam sed vel exercitationem
+          molestias aperiam repellat, quisquam voluptatum! Voluptatibus unde
+          asperiores tempore omnis id dicta similique ullam officiis expedita?
+          Laborum id culpa perferendis modi incidunt tempora doloribus ex autem
+          voluptatem magnam nam, inventore nostrum asperiores minus accusamus
+          facere, repudiandae quis deleniti quod! Quam magnam, praesentium
+          placeat necessitatibus, temporibus deleniti amet eveniet rerum iste,
+          nulla itaque nesciunt quis consequuntur id? Hic eos officia
+          perspiciatis omnis dolore explicabo odit aspernatur, sint itaque
+          pariatur veritatis asperiores. Sunt vel, delectus, nemo nulla minus
+          ipsam tempora laborum tenetur non, nostrum qui voluptatibus
+          necessitatibus illum fugit voluptate quo doloremque autem dolores?
+          Vero facilis, consequatur neque repellat eligendi assumenda quasi
+          architecto autem enim iusto! Nemo nihil veniam velit facere maxime
+          repellendus iure optio. A dolorem dolor, sed repellat ab maxime
+          delectus, necessitatibus nobis alias inventore repellendus ut nulla!
+          Commodi nam nisi inventore quaerat unde, vitae veniam odio, quasi
+          soluta at consequatur voluptas eos aperiam! Doloribus, voluptates
+          molestias non adipisci laboriosam ab, iusto molestiae rem quae in et
+          omnis magnam id. Placeat et quo vitae magni, culpa quasi at
+          accusantium sit quis autem expedita perferendis pariatur, aperiam odit
+          eligendi voluptatibus, odio adipisci atque. Recusandae quam iure,
+          sapiente tempore reprehenderit eius. Iste quas nesciunt labore
+          deleniti quod, soluta iure nam numquam doloremque. Magni voluptate
+          numquam aspernatur et labore, alias natus rerum facere optio tempore,
+          distinctio praesentium neque tempora. Excepturi maiores, consequatur
+          aliquam, at quas voluptas cum nobis accusantium quibusdam quasi quae
+          ea et dicta officiis provident voluptatum numquam soluta, a impedit
+          hic iure molestias error mollitia? Iure deleniti velit ex illo
+          asperiores aliquam id et provident adipisci perferendis sunt
+          cupiditate veritatis, dolorem nemo sequi. Incidunt autem aspernatur
+          eum hic nam, ipsa possimus veniam fugiat optio asperiores numquam
+          illum, harum sunt aut pariatur iusto accusamus ut similique ipsum fuga
+          iure! Laborum doloribus accusantium corrupti facere, quos cumque optio
+          iure possimus cum id quis ea! Perspiciatis non corporis enim ipsam
+          sunt, vero iste sint totam, quo, minus ullam cum itaque! Ipsum facilis
+          quasi consequatur eveniet excepturi ipsam dicta, numquam incidunt
+          blanditiis quo labore est, maxime ea explicabo? Laboriosam illum aut
+          incidunt et porro provident exercitationem ducimus accusantium,
+          aliquid voluptatem omnis optio assumenda ipsum nemo ea expedita
+          voluptas earum quia hic sit excepturi facilis asperiores odit quidem!
+          Nulla, ex velit, libero ipsum ea rerum vel totam quasi nisi tempora
+          cum culpa quaerat eligendi nobis? Minus qui exercitationem quam totam,
+          reprehenderit sit quasi quas. Quos unde ipsa quae molestiae sequi id
+          necessitatibus autem dolores exercitationem quidem sit non esse
+          repudiandae iste optio recusandae, quas delectus, vero, maxime tenetur
+          excepturi? Blanditiis, magnam libero esse eveniet deserunt nihil ex.
+          Explicabo id dignissimos quidem odio vel expedita error, dolor ex?
+        </p>
+        <button class="btn btn-success modal-close">
+          <i class="bi bi-x"></i>
+        </button>
       </div>
     </section>
     <!-- /Favorites -->
@@ -235,13 +268,94 @@
     <!-- All Recipes -->
     <section class="all-recipes" id="all-recipes">
       <div class="container-fluid container">
-        <h1 class="fs-3 text-center text-warning">
+        <h1 class="section_title fs-3 text-center text-warning mb-4">
           All Recipes
-          <i class="bi bi-list-task text-warning mx-1 fs-4"></i>
+          <i class="section_icon bi bi-list-task text-warning mx-1 fs-4"></i>
         </h1>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card recipes__card rounded-4">
+              <img
+                class="card-img-top rounded-4"
+                src="./images/8.png"
+                alt="..."
+              />
+              <div class="card-body py-4">
+                <h5 class="card-title fs-4">Lamb pilav(Plov)</h5>
+                <a
+                  href="#"
+                  class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
+                  >Details</a
+                >
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card recipes__card rounded-4">
+              <img
+                class="card-img-top rounded-4"
+                src="./images/2.png"
+                alt="..."
+              />
+              <div class="card-body py-4">
+                <h5 class="card-title fs-4">Strawberries Romanoff</h5>
+                <a
+                  href="#"
+                  class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
+                  >Details</a
+                >
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card recipes__card rounded-4">
+              <img
+                class="card-img-top rounded-4"
+                src="./images/3.png"
+                alt="..."
+              />
+              <div class="card-body py-4">
+                <h5 class="card-title fs-4">Potato Salad (Olivier Salad)</h5>
+                <a
+                  href="#"
+                  class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
+                  >Details</a
+                >
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card recipes__card rounded-4">
+              <img
+                class="card-img-top rounded-4"
+                src="./images/4.png"
+                alt="..."
+              />
+              <div class="card-body py-4">
+                <h5 class="card-title fs-4">Blini Pancakes</h5>
+                <a
+                  href="#"
+                  class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
+                  >Details</a
+                >
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- /All Recipes -->
-    <div class="img"></div>
   </body>
 </html>

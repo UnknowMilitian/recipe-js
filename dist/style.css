@@ -2107,16 +2107,38 @@ url(39795c0b4513de014cf8.woff?dd67030699838ea613ee6dbda90effa6) format("woff");
 section {
   padding: 2rem 0;
 }
+
+.modal {
+  position: fixed;
+  width: 40%;
+  height: 95%;
+  background-color: gray;
+  z-index: 10;
+  padding: 3rem 1rem 1rem 1rem;
+  display: block;
+  border-radius: 0.75rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.modal .modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
 /* Main */
 
 /* Header */
 header {
-  box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1;
   width: 100%;
   background-color: white;
+  z-index: 9;
 }
 
 header nav h1.header__title {
@@ -2146,38 +2168,42 @@ header nav .container .collapse form button {
 }
 /* /Header */
 
-/* Categories */
-section.categories {
-  background-color: #eaf2f6;
-}
-
-section.categories .categories-cards {
-  margin: 2rem 0;
-}
-
-section.categories .categories-cards .card {
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-}
-
-section.categories .categories-cards .card p.card-text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
-  margin: 0.8rem 0;
-}
-
-section.categories .categories-cards .card .btn {
-  letter-spacing: 1px;
-  background-color: midnightblue;
-  border: none;
-}
-
-/* /Categories */
-
 /* Favorites */
 .splide__track ul.splide__list .favorites__card {
   margin: 0 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.splide__track ul.splide__list .favorites__card .card-body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.splide__track ul.splide__list .favorites__card .card-body h5 {
+  position: absolute;
+  bottom: 0;
+  margin: 0 1rem 2rem 1rem;
+  display: block;
+  text-align: center;
+}
+
+.heart__btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.5rem;
+  color: red;
+  background-color: #fff;
+  border: none;
+}
+
+.heart__btn:focus {
+  color: gray !important;
 }
 /* /Favorites */
 
@@ -2185,39 +2211,80 @@ section.categories .categories-cards .card .btn {
 section.all-recipes {
   background-color: #fcfee8;
 }
+
+.recipes__card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.recipes__btn {
+  background-color: orange;
+  color: white !important;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.recipes__btn:hover {
+  background-color: rgba(255, 165, 0, 0.7);
+}
+
+section.all-recipes .heart__btn {
+  color: gray !important;
+}
+
+section.all-recipes .heart__btn:focus {
+  color: red !important;
+}
 /* /All Recipes */
-.img {
-  background-image: url(079845f785ad4fb11506.png);
-}
-.img {
-  background-image: url(934b6e57743550a1476d.png);
-}
-
-.img {
-  background-image: url(eada95c801747e8f4b6b.png);
-}
-
-.img {
-  background-image: url(6657d291b32c0e0c86fb.png);
-}
-
-.img {
-  background-image: url(6c50a430287a05d7f40e.png);
-}
-
-.img {
-  background-image: url(5bdf51785676bb3fe943.png);
-}
-
-.img {
-  background-image: url(95ed2e628427363c41f2.png);
-}
-
-.img {
-  background-image: url(ab103906bc741ed97911.png);
-}
 
 /*!*************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./css/media.css ***!
   \*************************************************************************************************************/
+@media screen and (max-width: 990px) {
+  section.categories .categories-cards .card .categories__card-content button {
+    width: 90%;
+  }
+  .modal {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section.categories .categories-cards .card .categories__card-content {
+    opacity: 1;
+  }
+  section.categories .categories-cards .card .categories__card-content button {
+    width: 85%;
+  }
+  .section_title {
+    font-size: 2.2rem !important;
+  }
+  .section_icon {
+    font-size: 2rem !important;
+  }
+  .modal {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.categories .categories-cards .card .categories__card-content {
+    padding: 2rem 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  section.categories .categories-cards .card .categories__card-content button {
+    width: 88%;
+  }
+
+  section.categories .categories-cards .card .categories__card-content h1 {
+    font-size: 2.5rem;
+  }
+  .modal {
+    width: 95%;
+    max-height: 95%;
+    border-radius: 0.75rem;
+    overflow-y: scroll;
+  }
+}
 
