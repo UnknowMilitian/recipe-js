@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <title>Meals project - JS</title>
   </head>
@@ -64,32 +68,43 @@
         Favorites
         <i class="section_icon bi bi-star-fill text-danger mx-1 fs-4"></i>
       </h1>
-      <div class="container-fluid px-0 px-md-0">
-        <div
-          class="splide px-0 pb-5 pt-4 px-md-5"
-          role="group"
-          aria-label="Splide Basic HTML Example"
-        >
-          <div class="splide__track">
-            <ul id="favorites-ul" class="splide__list text-center">
-              <!-- <li class="splide__slide">
-                <div class="favorites__card card rounded-4">
-                  <img
-                    class="card-img-top rounded-4"
-                    src="./images/5.png"
-                    alt="..."
-                  />
-                  <div class="card-body py-4">
-                    <h5 class="card-title fs-4">
-                      Potato Salad (Olivier Salad)
-                    </h5>
-                  </div>
-                  <button class="btn bg-white text-danger heart__btn">
-                    <i class="bi bi-heart-fill"></i>
-                  </button>
-                </div>
-              </li> -->
-            </ul>
+      <div class="container-fluid container mt-4">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+            <div class="card">
+              <img src="./images/1.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h6 class="card-title">Brie wrapped in prosciutto & brioche</h6>
+                <button>See recipes</button>
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+            <div class="card">
+              <img src="./images/2.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h6 class="card-title">Lamb and Lemon Souvlaki</h6>
+                <button>See recipes</button>
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+            <div class="card">
+              <img src="./images/3.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h6 class="card-title">Madeira Cake</h6>
+                <button>See recipes</button>
+              </div>
+              <button class="btn bg-white text-danger heart__btn">
+                <i class="bi bi-heart-fill"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -221,7 +236,7 @@
           All Recipes
           <i class="section_icon bi bi-list-task text-warning mx-1 fs-4"></i>
         </h1>
-        <div id="meals" class="row"></div>
+        <div id="meals" class="row justify-content-center"></div>
       </div>
     </section>
     <!-- /All Recipes -->

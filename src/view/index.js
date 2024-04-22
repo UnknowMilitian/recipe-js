@@ -1,9 +1,5 @@
 import config from "../config/index";
-import Splide from "@splidejs/splide";
-import "@splidejs/splide/css/sea-green";
-
 const meals = document.getElementById("meals");
-const favorites = document.getElementById("favorites-ul");
 
 getRandomMeal();
 fetchFavMeals();
@@ -99,61 +95,10 @@ async function fetchFavMeals() {
     const mealID = mealIDs[i];
     const meal = await getMealById(mealID);
 
-    addMealFav(meal);
+    meals.push(meal);
+
+    // addMealFav(meal);
   }
-}
 
-function addMealFav(mealData) {
-  console.log(mealData);
-
-  const favorite = document.createElement("li");
-  favorite.classList.add("splide__slide");
-
-  favorite.innerHTML = `
-    <div class="favorites__card card rounded-4">
-      <img
-        class="card-img-top rounded-4"
-        src="${mealData.strMealThumb}"
-        alt="${mealData.strMeal}"
-      />
-      <div class="card-body py-4">
-        <h5 class="card-title fs-4">
-          ${mealData.strMeal}
-        </h5>
-      </div>
-      <button class="btn bg-white text-danger heart__btn">
-        <i class="bi bi-heart-fill"></i>
-      </button>
-    </div>
-  `;
-
-  const btn = favorite.querySelector(".card button.heart__btn");
-
-  btn.addEventListener("click", () => {
-    if (btn.classList.contains("active")) {
-      removeMealLS(mealData.idMeal);
-      btn.classList.remove("active");
-    } else {
-      addMealLS(mealData.idMeal);
-      btn.classList.add("active");
-    }
-  });
-
-  // Assuming `favorites` is the container for the Splide slider
-  favorites.appendChild(favorite);
-
-  // Reinitialize the Splide slider
-  const splide = new Splide(".splide", {
-    type: "loop",
-    perPage: 4,
-    perMove: 1,
-    breakpoints: {
-      990: {
-        perPage: 2,
-      },
-      750: {
-        perPage: 1,
-      },
-    },
-  }).mount();
+  console.log(meals);
 }

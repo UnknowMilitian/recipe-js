@@ -31,6 +31,20 @@ section {
   top: 0.5rem;
   right: 0.5rem;
 }
+
+.heart__btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.5rem;
+  color: red;
+  background-color: #fff;
+  border: none;
+}
+
+.heart__btn:focus {
+  color: gray !important;
+}
 /* Main */
 
 /* Header */
@@ -72,42 +86,59 @@ header nav .container .collapse form button {
 /* /Header */
 
 /* Favorites */
-.splide__track ul.splide__list .favorites__card {
-  margin: 0 1rem;
-  cursor: pointer;
-  position: relative;
+
+section.favorites .row {
+  gap: 1.25rem 0;
 }
 
-.splide__track ul.splide__list .favorites__card .card-body {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+section.favorites .card {
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+section.favorites .card img {
   border-radius: 1rem;
 }
 
-.splide__track ul.splide__list .favorites__card .card-body h5 {
+section.favorites .card .card-body {
+  height: 100%;
+  top: 0;
+  width: 100%;
+  border-radius: 1rem;
   position: absolute;
-  bottom: 0;
-  margin: 0 1rem 2rem 1rem;
-  display: block;
   text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.heart__btn {
+section.favorites .card .card-body:hover {
+  opacity: 1;
+}
+
+section.favorites .card .card-body h6.card-title {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  padding: 0.25rem 0.5rem;
-  color: red;
-  background-color: #fff;
-  border: none;
+  font-weight: 700;
+  font-size: 1rem !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
 }
 
-.heart__btn:focus {
-  color: gray !important;
+section.favorites .card .card-body button {
+  position: absolute;
+  bottom: 1rem;
+  display: block;
+  width: 80%;
+  background-color: orange;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.15rem 0;
 }
+
 /* /Favorites */
 
 /* All Recipes */

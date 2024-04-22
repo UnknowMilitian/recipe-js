@@ -23,6 +23,14 @@
   .modal {
     width: 80%;
   }
+
+  section.favorites .card .card-body {
+    opacity: 1;
+  }
+
+  section.favorites .card .card-body h6.card-title {
+    font-size: 1.5rem !important;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -43,5 +51,15 @@
     max-height: 95%;
     border-radius: 0.75rem;
     overflow-y: scroll;
+  }
+
+  section.favorites .card .card-body h6.card-title {
+    font-size: 1.75rem !important;
+  }
+
+  section.favorites .card .card-body button {
+    width: 90%;
+    padding: 0.2rem 0;
+    font-size: 1.3rem;
   }
 }
