@@ -1,5 +1,6 @@
 import config from "../config/index";
 const meals = document.getElementById("meals");
+const favMeals = document.getElementById("fav-meals");
 
 getRandomMeal();
 fetchFavMeals();
@@ -61,6 +62,8 @@ function addMeal(mealData, random = false) {
       addMealLS(mealData.idMeal);
       btn.classList.add("active");
     }
+
+    fetchFavMeals();
   });
   meals.appendChild(meal);
 }
@@ -87,6 +90,8 @@ function getMealsLS() {
 }
 
 async function fetchFavMeals() {
+  favMeals.innerHTML = ``;
+
   const mealIDs = getMealsLS();
 
   const meals = [];
@@ -97,8 +102,33 @@ async function fetchFavMeals() {
 
     meals.push(meal);
 
-    // addMealFav(meal);
+    addMealFav(meal);
   }
+}
 
-  console.log(meals);
+function addMealFav(mealData, random = false) {
+  const favMeal = document.createElement("div");
+  favMeal.classList.add("col-12", "col-sm-6", "col-md-4", "col-xl-2");
+
+  favMeal.innerHTML = `
+    <div class="card">
+      <img src="${mealData.strMealThumb}" class="card-img-top" alt="${mealData.strMeal}" />
+      <div class="card-body">
+        <h6 class="card-title">${mealData.strMeal}</h6>
+        <button>See recipes</button>
+      </div>
+      <button id="favMealHeart" class="btn bg-white text-danger heart__btn">
+        <i class="bi bi-heart-fill"></i>
+      </button>
+    </div>
+  `;
+
+  const btn = favMeal.querySelector("#favMealHeart");
+  btn.addEventListener("click", () => {
+    removeMealLS(mealData.idMeal);
+
+    fetchFavMeals();
+  });
+
+  favMeals.appendChild(favMeal);
 }
