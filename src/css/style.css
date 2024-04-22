@@ -13,17 +13,52 @@ section {
 
 .modal {
   position: fixed;
-  width: 40%;
-  height: 95%;
-  background-color: gray;
+  display: none;
+  width: 35%;
+  max-height: 95%; /* Limit height to 95% of viewport */
+  background-color: rgb(253, 222, 164);
   z-index: 10;
   padding: 3rem 1rem 1rem 1rem;
-  display: block;
-  border-radius: 0.75rem;
+  border-radius: 7px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  overflow-y: auto; /* Enable vertical scrollbar */
+  transition: all 0.3 ease-in-out;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal img {
+  width: 100%;
+  height: 25rem;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+
+.modal-close {
+  background-color: orange;
+  color: white;
+  border: none;
+}
+
+/* Customize the scrollbar */
+.modal::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Handle */
+.modal::-webkit-scrollbar-thumb {
+  background: rgb(254, 196, 89); /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle on hover */
+.modal::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 183, 48); /* Darker color when hovered */
 }
 
 .modal .modal-close {
