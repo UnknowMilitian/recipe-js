@@ -1,6 +1,10 @@
 import config from "../config/index";
-const meals = document.getElementById("meals");
+const mealsEl = document.getElementById("meals");
 const favMeals = document.getElementById("fav-meals");
+
+// Search Section
+const searchTerm = document.getElementById("search-term");
+const searchBtn = document.getElementById("search");
 
 getRandomMeal();
 fetchFavMeals();
@@ -22,8 +26,12 @@ async function getMealById(id) {
 }
 
 async function getMealsBySearch(term) {
-  const meals = await fetch(`${config.url}search.php?s=` + term);
-  console.log(meals);
+  const resp = await fetch(`${config}search.php?s=${term}`);
+
+  const resData = await resp.json();
+  const meals = resData.meals;
+
+  return meals;
 }
 
 function addMeal(mealData, random = false) {
@@ -33,24 +41,24 @@ function addMeal(mealData, random = false) {
   meal.classList.add("col-12", "col-sm-6", "col-lg-3", "mb-3");
 
   meal.innerHTML = `
-    <div class="card recipes__card rounded-4">
-      <img
-        class="card-img-top rounded-4"
-        src="${mealData.strMealThumb}"
-        alt="${mealData.strMeal}"
-      />
-      <div class="card-body py-4">
-        <h5 class="card-title fs-4">${mealData.strMeal}</h5>
-        <a
-          class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
-          >Details</a
-        >
+      <div class="card recipes__card rounded-4">
+        <img
+          class="card-img-top rounded-4"
+          src="${mealData.strMealThumb}"
+          alt="${mealData.strMeal}"
+        />
+        <div class="card-body py-4">
+          <h5 class="card-title fs-4">${mealData.strMeal}</h5>
+          <a
+            class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
+            >Details</a
+          >
+        </div>
+        <button class="btn bg-white text-danger heart__btn">
+          <i class="bi bi-heart-fill"></i>
+        </button>
       </div>
-      <button class="btn bg-white text-danger heart__btn">
-        <i class="bi bi-heart-fill"></i>
-      </button>
-    </div>
-  `;
+    `;
 
   const btn = meal.querySelector(".card button.heart__btn");
 
@@ -111,17 +119,17 @@ function addMealFav(mealData, random = false) {
   favMeal.classList.add("col-12", "col-sm-6", "col-md-4", "col-xl-2");
 
   favMeal.innerHTML = `
-    <div class="card">
-      <img src="${mealData.strMealThumb}" class="card-img-top" alt="${mealData.strMeal}" />
-      <div class="card-body">
-        <h6 class="card-title">${mealData.strMeal}</h6>
-        <button>See recipes</button>
+      <div class="card">
+        <img src="${mealData.strMealThumb}" class="card-img-top" alt="${mealData.strMeal}" />
+        <div class="card-body">
+          <h6 class="card-title">${mealData.strMeal}</h6>
+          <button>See recipes</button>
+        </div>
+        <button id="favMealHeart" class="btn bg-white text-danger heart__btn">
+          <i class="bi bi-heart-fill"></i>
+        </button>
       </div>
-      <button id="favMealHeart" class="btn bg-white text-danger heart__btn">
-        <i class="bi bi-heart-fill"></i>
-      </button>
-    </div>
-  `;
+    `;
 
   const btn = favMeal.querySelector("#favMealHeart");
   btn.addEventListener("click", () => {
@@ -132,3 +140,20 @@ function addMealFav(mealData, random = false) {
 
   favMeals.appendChild(favMeal);
 }
+
+searchBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  // Clean The Container
+  mealsEl.innerHTML = "";
+  const search = searchTerm.value;
+
+  const meals = await getMealsBySearch(search);
+
+  if (meals) {
+    meals.forEach((meal) => {
+      addMeal(meal);
+      searchTerm.value = ''
+    });
+  }
+});
