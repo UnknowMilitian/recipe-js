@@ -2088,10 +2088,6 @@ url(39795c0b4513de014cf8.woff?dd67030699838ea613ee6dbda90effa6) format("woff");
 .bi-suitcase2::before { content: "\f902"; }
 .bi-vignette::before { content: "\f903"; }
 
-/*!***********************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css ***!
-  \***********************************************************************************************************************************************************************/
-.splide__track--nav>.splide__list>.splide__slide{border:3px solid transparent;border-radius:4px;cursor:pointer;opacity:.7}.splide__track--nav>.splide__list>.splide__slide.is-active{border:3px solid #20b2aa;opacity:1}.splide__arrows--ttb .splide__arrow{left:50%;transform:translate(-50%)}.splide__arrows--ttb .splide__arrow--prev{top:1em}.splide__arrows--ttb .splide__arrow--prev svg{transform:rotate(-90deg)}.splide__arrows--ttb .splide__arrow--next{bottom:1em;top:auto}.splide__arrows--ttb .splide__arrow--next svg{transform:rotate(90deg)}.splide__pagination--ttb{bottom:0;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;left:auto;padding:1em 0;right:1em;top:0}.splide__pagination--ttb .splide__pagination__page{height:20px;width:5px}.splide__arrow{-ms-flex-align:center;align-items:center;background:transparent;border:0;border-radius:0;cursor:pointer;display:-ms-flexbox;display:flex;height:2.5em;-ms-flex-pack:center;justify-content:center;padding:0;position:absolute;top:50%;transform:translateY(-50%);width:2.5em;z-index:1}.splide__arrow svg{fill:#20b2aa;height:2.5em;transition:fill .2s linear;width:2.5em}.splide__arrow:hover:not(:disabled) svg{fill:#57e1d9}.splide__arrow:disabled{opacity:.3}.splide__arrow:focus-visible{outline:3px solid #20b2aa;outline-offset:3px}.splide__arrow--prev{left:1em}.splide__arrow--prev svg{transform:scaleX(-1)}.splide__arrow--next{right:1em}.splide.is-focus-in .splide__arrow:focus{outline:3px solid #20b2aa;outline-offset:3px}.splide__pagination{bottom:1em;left:0;padding:0 1em;position:absolute;right:0;z-index:1}.splide__pagination__page{background:#ccc;border:0;border-radius:2.5px;display:inline-block;height:5px;margin:3px;padding:0;position:relative;transition:background-color .2s linear;width:20px}.splide__pagination__page.is-active{background:#20b2aa;z-index:1}.splide__pagination__page:hover{background:#57e1d9;cursor:pointer;opacity:.9}.splide__pagination__page:focus-visible{outline:3px solid #20b2aa;outline-offset:3px}.splide.is-focus-in .splide__pagination__page:focus{outline:3px solid #20b2aa;outline-offset:3px}.splide__slide{-webkit-tap-highlight-color:rgba(0,0,0,0);border-radius:4px}.splide__slide:focus{outline:0}@supports(outline-offset:-3px){.splide__slide:focus-visible{outline:3px solid #20b2aa;outline-offset:-3px}}@media screen and (-ms-high-contrast:none){.splide__slide:focus-visible{border:3px solid #20b2aa}}@supports(outline-offset:-3px){.splide.is-focus-in .splide__slide:focus{outline:3px solid #20b2aa;outline-offset:-3px}}@media screen and (-ms-high-contrast:none){.splide.is-focus-in .splide__slide:focus{border:3px solid #20b2aa}.splide.is-focus-in .splide__track>.splide__list>.splide__slide:focus{border-color:#20b2aa}}.splide__container{box-sizing:border-box;position:relative}.splide__list{backface-visibility:hidden;display:-ms-flexbox;display:flex;height:100%;margin:0!important;padding:0!important}.splide.is-initialized:not(.is-active) .splide__list{display:block}.splide__pagination{-ms-flex-align:center;align-items:center;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:center;justify-content:center;margin:0;pointer-events:none}.splide__pagination li{display:inline-block;line-height:1;list-style-type:none;margin:0;pointer-events:auto}.splide:not(.is-overflow) .splide__pagination{display:none}.splide__progress__bar{width:0}.splide{position:relative;visibility:hidden}.splide.is-initialized,.splide.is-rendered{visibility:visible}.splide__slide{backface-visibility:hidden;box-sizing:border-box;-ms-flex-negative:0;flex-shrink:0;list-style-type:none!important;margin:0;position:relative}.splide__slide img{vertical-align:bottom}.splide__spinner{animation:splide-loading 1s linear infinite;border:2px solid #20b2aa;border-left-color:transparent;border-radius:50%;bottom:0;contain:strict;display:inline-block;height:20px;left:0;margin:auto;position:absolute;right:0;top:0;width:20px}.splide__sr{clip:rect(0 0 0 0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.splide__toggle.is-active .splide__toggle__play,.splide__toggle__pause{display:none}.splide__toggle.is-active .splide__toggle__pause{display:inline}.splide__track{overflow:hidden;position:relative;z-index:0}@keyframes splide-loading{0%{transform:rotate(0)}to{transform:rotate(1turn)}}.splide__track--draggable{-webkit-touch-callout:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.splide__track--fade>.splide__list>.splide__slide{margin:0!important;opacity:0;z-index:0}.splide__track--fade>.splide__list>.splide__slide.is-active{opacity:1;z-index:1}.splide--rtl{direction:rtl}.splide__track--ttb>.splide__list{display:block}.splide__progress__bar{background:#ccc;height:3px}.splide__toggle{cursor:pointer}.splide__toggle:focus-visible{outline:3px solid #20b2aa;outline-offset:3px}.splide.is-focus-in .splide__toggle:focus{outline:3px solid #20b2aa;outline-offset:3px}.splide__arrows--rtl .splide__arrow--prev{left:auto;right:1em}.splide__arrows--rtl .splide__arrow--prev svg{transform:scaleX(1)}.splide__arrows--rtl .splide__arrow--next{left:1em;right:auto}.splide__arrows--rtl .splide__arrow--next svg{transform:scaleX(-1)}.splide__slider>.splide__arrows .splide__arrow--prev{left:-2.5em}.splide__slider>.splide__arrows .splide__arrow--next{right:-2.5em}.splide{padding:3em}
 /*!*************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!./css/style.css ***!
   \*************************************************************************************************************/
@@ -2110,23 +2106,72 @@ section {
 
 .modal {
   position: fixed;
-  width: 40%;
-  height: 95%;
-  background-color: gray;
+  display: none;
+  width: 35%;
+  max-height: 95%; /* Limit height to 95% of viewport */
+  background-color: rgb(253, 222, 164);
   z-index: 10;
   padding: 3rem 1rem 1rem 1rem;
-  display: block;
-  border-radius: 0.75rem;
+  border-radius: 7px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  overflow-y: auto; /* Enable vertical scrollbar */
+  transition: all 0.3 ease-in-out;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal img {
+  width: 100%;
+  height: 25rem;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+
+.modal-close {
+  background-color: orange;
+  color: white;
+  border: none;
+}
+
+/* Customize the scrollbar */
+.modal::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Handle */
+.modal::-webkit-scrollbar-thumb {
+  background: rgb(254, 196, 89); /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle on hover */
+.modal::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 183, 48); /* Darker color when hovered */
 }
 
 .modal .modal-close {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+}
+
+.heart__btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.5rem;
+  color: red;
+  background-color: #fff;
+  border: none;
+}
+
+.heart__btn:focus {
+  color: gray !important;
 }
 /* Main */
 
@@ -2169,42 +2214,62 @@ header nav .container .collapse form button {
 /* /Header */
 
 /* Favorites */
-.splide__track ul.splide__list .favorites__card {
-  margin: 0 1rem;
-  cursor: pointer;
-  position: relative;
+section.favorites .row {
+  gap: 1.25rem 0;
 }
 
-.splide__track ul.splide__list .favorites__card .card-body {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+section.favorites .card {
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+section.favorites .card img {
   border-radius: 1rem;
 }
 
-.splide__track ul.splide__list .favorites__card .card-body h5 {
+section.favorites .card .card-body {
+  height: 100%;
+  top: 0;
+  width: 100%;
+  border-radius: 1rem;
   position: absolute;
-  bottom: 0;
-  margin: 0 1rem 2rem 1rem;
-  display: block;
   text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.heart__btn {
+section.favorites .card .card-body:hover {
+  opacity: 1;
+}
+
+section.favorites .card .card-body h6.card-title {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  padding: 0.25rem 0.5rem;
-  color: red;
-  background-color: #fff;
-  border: none;
+  font-weight: 700;
+  font-size: 1rem !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
 }
 
-.heart__btn:focus {
-  color: gray !important;
+section.favorites .card .card-body button {
+  position: absolute;
+  bottom: 1rem;
+  display: block;
+  width: 80%;
+  background-color: orange;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.15rem 0;
 }
+
+section.favorites .card .card-body button:hover {
+  background-color: rgb(253, 181, 48);
+}
+
 /* /Favorites */
 
 /* All Recipes */
@@ -2232,7 +2297,7 @@ section.all-recipes .heart__btn {
   color: gray !important;
 }
 
-section.all-recipes .heart__btn:focus {
+section.all-recipes .heart__btn.active {
   color: red !important;
 }
 /* /All Recipes */
@@ -2265,6 +2330,14 @@ section.all-recipes .heart__btn:focus {
   .modal {
     width: 80%;
   }
+
+  section.favorites .card .card-body {
+    opacity: 1;
+  }
+
+  section.favorites .card .card-body h6.card-title {
+    font-size: 1.5rem !important;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -2283,8 +2356,32 @@ section.all-recipes .heart__btn:focus {
   .modal {
     width: 95%;
     max-height: 95%;
-    border-radius: 0.75rem;
+    border-radius: 10px;
     overflow-y: scroll;
+  }
+
+  section.favorites .card .card-body h6.card-title {
+    font-size: 1.75rem !important;
+  }
+
+  section.favorites .card .card-body button {
+    width: 90%;
+    padding: 0.2rem 0;
+    font-size: 1.3rem;
+  }
+
+  .modal img {
+    width: 100%;
+    height: 17rem;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
+
+  .modal .modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.1rem;
   }
 }
 
