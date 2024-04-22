@@ -121,7 +121,6 @@ header nav .container .collapse form button {
 /* /Header */
 
 /* Favorites */
-
 section.favorites .row {
   gap: 1.25rem 0;
 }
@@ -172,6 +171,10 @@ section.favorites .card .card-body button {
   border: none;
   border-radius: 0.2rem;
   padding: 0.15rem 0;
+}
+
+section.favorites .card .card-body button:hover {
+  background-color: rgb(253, 181, 48);
 }
 
 /* /Favorites */

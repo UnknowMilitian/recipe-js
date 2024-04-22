@@ -13,17 +13,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalClose = document.querySelector(".modal-close");
   const mealInfoEl = document.querySelector(".info");
 
-  getRandomMeal();
+  getRandomMeals(6)
+    .then((randomMeals) => {
+      randomMeals.forEach((meal) => {
+        addMeal(meal, true);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching random meals:", error);
+    });
   fetchFavMeals();
 
-  async function getRandomMeal() {
-    const resp = await fetch(`${config}random.php`);
-    const responseData = await resp.json();
-    const randomMeal = responseData.meals[0];
-
-    addMeal(randomMeal, true);
+  async function getRandomMeals(numberOfMeals) {
+    const meals = [];
+    for (let i = 0; i < numberOfMeals; i++) {
+      const resp = await fetch(`${config}random.php`);
+      const responseData = await resp.json();
+      const randomMeal = responseData.meals[0];
+      meals.push(randomMeal);
+    }
+    return meals;
   }
-
   async function getMealById(id) {
     const resp = await fetch(`${config}lookup.php?i=` + id);
     const respData = await resp.json();
@@ -42,10 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addMeal(mealData, random = false) {
-    console.log(mealData);
-
     const meal = document.createElement("div");
     meal.classList.add("col-12", "col-sm-6", "col-lg-3", "mb-3");
+
+    const isFavorite = getMealsLS().includes(mealData.idMeal);
 
     meal.innerHTML = `
       <div class="card recipes__card rounded-4">
@@ -59,10 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
           <a
             id="see-recipes"
             class="btn recipes__btn rounded-1 w-full d-block text-uppercase fw-bold"
-            >Details</a
+            >See recipes</a
           >
         </div>
-        <button class="btn bg-white text-danger heart__btn">
+        <button class="btn bg-white text-danger heart__btn ${
+          isFavorite ? "active" : ""
+        }">
           <i class="bi bi-heart-fill"></i>
         </button>
       </div>
@@ -80,12 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       fetchFavMeals();
-    });
-
-    const modalBtn = meal.querySelector("#see-recipes");
-
-    modalBtn.addEventListener("click", () => {
-      showMealInfo(mealData);
     });
 
     meals.appendChild(meal);
@@ -114,19 +120,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function fetchFavMeals() {
     favMeals.innerHTML = ``;
-
     const mealIDs = getMealsLS();
-
     const meals = [];
 
     for (let i = 0; i < mealIDs.length; i++) {
       const mealID = mealIDs[i];
       const meal = await getMealById(mealID);
-
       meals.push(meal);
-
-      addMealFav(meal);
     }
+
+    meals.forEach((meal) => {
+      addMealFav(meal);
+    });
   }
 
   function addMealFav(mealData, random = false) {
@@ -138,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="${mealData.strMealThumb}" class="card-img-top" alt="${mealData.strMeal}" />
         <div class="card-body">
           <h6 class="card-title">${mealData.strMeal}</h6>
-          <button id="see-recipes">See recipes</button>
+          <button id="see-recipes" class="btn recipes__btn">See recipes</button>
         </div>
         <button id="favMealHeart" class="btn bg-white text-danger heart__btn">
           <i class="bi bi-heart-fill"></i>
