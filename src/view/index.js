@@ -1,4 +1,4 @@
-import config from "../config/index";
+import config from "../config";
 
 document.addEventListener("DOMContentLoaded", function () {
   const mealsEl = document.getElementById("meals");
@@ -94,7 +94,12 @@ document.addEventListener("DOMContentLoaded", function () {
       fetchFavMeals();
     });
 
-    meals.appendChild(meal);
+    const modalBtn = meal.querySelector("#see-recipes");
+    modalBtn.addEventListener("click", () => {
+      showMealInfo(mealData);
+    });
+
+    mealsEl.appendChild(meal);
   }
 
   function addMealLS(mealID) {
@@ -152,20 +157,8 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     const modalBtn = favMeal.querySelector("#see-recipes");
-
     modalBtn.addEventListener("click", () => {
       showMealInfo(mealData);
-    });
-
-    modalClose.addEventListener("click", () => {
-      modal.classList.remove("active");
-    });
-
-    const btn = favMeal.querySelector("#favMealHeart");
-    btn.addEventListener("click", () => {
-      removeMealLS(mealData.idMeal);
-
-      fetchFavMeals();
     });
 
     favMeals.appendChild(favMeal);
@@ -195,21 +188,37 @@ document.addEventListener("DOMContentLoaded", function () {
     <h1>${mealData.strMeal}</h1>
     <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}" />
     <div class="info">
-      <p>
-        ${mealData.strInstructions}
-      </p>
+        <p>
+            ${mealData.strInstructions}
+        </p>
 
-      <h3>Ingredients</h3>
+        <h3>Ingredients</h3>
 
-      <ul>
-        ${ingredients.map((ing) => `<li>${ing}</li>`).join("")}
-      </ul>
+        <ul>
+            ${ingredients.map((ing) => `<li>${ing}</li>`).join("")}
+        </ul>
     </div>
-  `;
+    `;
 
     mealInfoEl.appendChild(mealEl);
 
     modal.classList.add("active");
+
+    // Add event listener to close popup when close button is clicked
+    modalClose.addEventListener("click", () => {
+      closeModal();
+    });
+
+    // Add event listener to close popup when clicking outside the popup area
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
+
+  function closeModal() {
+    modal.classList.remove("active");
   }
 
   searchBtn.addEventListener("click", async (e) => {
