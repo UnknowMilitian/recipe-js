@@ -86,6 +86,15 @@ document.addEventListener("DOMContentLoaded", function () {
       if (btn.classList.contains("active")) {
         removeMealLS(mealData.idMeal);
         btn.classList.remove("active");
+        // If the meal is in the "Favorites" section, remove it visually
+        if (!random) {
+          const favMealToRemove = favMeals.querySelector(
+            `[data-meal-id="${mealData.idMeal}"]`
+          );
+          if (favMealToRemove) {
+            favMeals.removeChild(favMealToRemove);
+          }
+        }
       } else {
         addMealLS(mealData.idMeal);
         btn.classList.add("active");
@@ -150,11 +159,14 @@ document.addEventListener("DOMContentLoaded", function () {
           <h6 class="card-title">${mealData.strMeal}</h6>
           <button id="see-recipes" class="btn recipes__btn">See recipes</button>
         </div>
-        <button id="favMealHeart" class="btn bg-white text-danger heart__btn">
+        <button class="btn bg-white text-danger heart__btn">
           <i class="bi bi-heart-fill"></i>
         </button>
       </div>
     `;
+
+    // Set a data attribute with the meal ID for easier identification
+    favMeal.setAttribute("data-meal-id", mealData.idMeal);
 
     const modalBtn = favMeal.querySelector("#see-recipes");
     modalBtn.addEventListener("click", () => {
@@ -162,6 +174,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     favMeals.appendChild(favMeal);
+
+    // Attach event listener for heart button click
+    const btn = favMeal.querySelector(".card button.heart__btn");
+
+    btn.addEventListener("click", () => {
+      removeMealLS(mealData.idMeal); // Remove the meal from local storage
+      favMeals.removeChild(favMeal); // Remove the meal from the favorites section visually
+      // Update the heart button state in the "All Recipes" section
+      const allRecipeMeal = mealsEl.querySelector(
+        `[data-meal-id="${mealData.idMeal}"]`
+      );
+      if (allRecipeMeal) {
+        const allRecipeBtn = allRecipeMeal.querySelector(
+          ".card button.heart__btn"
+        );
+        if (allRecipeBtn) {
+          allRecipeBtn.classList.remove("active");
+        }
+      }
+    });
   }
 
   function showMealInfo(mealData) {
